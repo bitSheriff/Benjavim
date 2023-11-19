@@ -24,7 +24,7 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
--- require and load all the other snippets  
+-- require and load all the other snippets
 require("custom.plugins.snippets.markdown")
 require("custom.plugins.snippets.tex")
 require("custom.plugins.snippets.c")
@@ -37,20 +37,36 @@ ls.filetype_extend("tex", { "latex", "tex" })
 ls.filetype_extend("tex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("plaintex", { "plaintex", "latex", "tex" })
 
--- 
--- FUNCTIONS 
+--
+-- FUNCTIONS
 --
 local date = function()
   return { os.date "%Y-%m-%d" }
 end
 
+local time = function()
+  return { os.date "%H:%m" }
+end
 -- -------------------
 -- SNIPPETS
 -- -------------------
 
 -- stupid snippet for testing
 ls.add_snippets("all", {
-  s("blub", {t("BliBlaBlub")})
+  s("blub", { t("BliBlaBlub") })
+})
+
+-- insert time
+ls.add_snippets(nil, {
+  all = {
+    s({
+      trig = "time",
+      namr = "Time",
+      dscr = "Time in the form of HH:mm",
+    }, {
+      f(time, {}),
+    }),
+  },
 })
 
 -- insert date
