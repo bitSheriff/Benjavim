@@ -62,10 +62,13 @@ map("n", "<leader>at", "<cmd> TodoTelescope <cr>", { desc = "[A]ction show [T]od
 -- builds
 map("n", "<leader>bm", "<cmd> MarkdownPreview <cr>", { desc = "[b]uild [m]arkdown" })
 map("n", "<leader>bl", "<cmd> VimtexCompile <cr>", { desc = "[b]uild [l]atex" })
+-- C
 map("n", "<leader>bca", "<cmd> make all <cr>", { desc = "[b]uild [c] make [a]ll" })
 map("n", "<leader>bcc", "<cmd> make clean <cr>", { desc = "[b]uild [c] make [c]lean" })
 map("n", "<leader>bcd", "<cmd> make doc <cr>", { desc = "[b]uild [c] make [d]oc" })
-
+-- Rust
+map("n", "<leader>brb", "<cmd> !cargo build <cr>", { desc = "[b]uild [r]ust just [b]uild" })
+map("n", "<leader>brr", "<cmd> !cargo run <cr>", { desc = "[b]uild [r]ust [r]un" })
 
 
 map("n", "<leader>d.", "<cmd> DapContinue <cr>", { desc = "[D]ebug [R]un / Continue" })
