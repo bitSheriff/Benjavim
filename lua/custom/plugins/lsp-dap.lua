@@ -33,11 +33,9 @@ dap.configurations.c = dap.configurations.cpp
 return {
   -- Tools for Rust
   {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    config = function()
-      require("rust-tools").setup {}
-    end,
+    'mrcjkb/rustaceanvim',
+    version = '^4', -- Recommended
+    ft = { 'rust' },
   },
 
   {
