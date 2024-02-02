@@ -2,15 +2,16 @@
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  version = "*",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",
-    "MunifTanjim/nui.nvim",
-  },
-  config = function ()
-    require('neo-tree').setup {
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    version = "*",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require('neo-tree').setup {
         filesystem = {
           filtered_items = {
             visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
@@ -18,6 +19,14 @@ return {
             hide_gitignored = false,
           },
         }
-    }
-  end,
+      }
+    end,
+  },
+
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 }
