@@ -23,5 +23,7 @@ vim.cmd [[colorscheme dracula]]
 
 vim.cmd [[set spelllang=en,de]]
 
+vim.opt.conceallevel = 1
+
 -- set soft wrapping as default
 require('wrapping').soft_wrap_mode()
