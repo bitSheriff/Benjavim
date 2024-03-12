@@ -46,6 +46,7 @@ map("n", "<leader>tf", "<cmd> ToggleTerm size=60 direction=float <cr>", { desc =
 
 -- Obsidian Workspace
 map("n", "<leader>os", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
+map("n", "<leader>ot", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday" })
 
 -- actions
 map("n", "<leader>af", "gg=G", { desc = "[A]ction code [f]ormat while file" })

@@ -15,13 +15,29 @@ return {
   -- Obsidian inside nvim
   {
     "epwalsh/obsidian.nvim",
-    enabled = false,
+    enabled = true,
+    version = "*", -- latest version instead of latest commit
+    dependencies = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+    },
     config = function()
       require("obsidian").setup {
-        dir = "~/notes",
+
+        workspaces = {
+          {
+            name = "personal",
+            path = "~/notes",
+          },
+        },
         completion = {
           nvim_cmp = true,
-        }
+          min_chars = 2,
+        },
+        daily_notes = {
+          folder = "Journal/Entries/Daily",
+        },
+        disable_frontmatter = true, -- dont let obsidian.nvim change the frontmatter
       }
     end,
   },
