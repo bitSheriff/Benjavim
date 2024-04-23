@@ -26,9 +26,12 @@ return {
 
         workspaces = {
           {
-            name = "personal",
+            name = "Notes",
             path = "~/notes",
           },
+        },
+        templates = {
+          subdir = "_templates",
         },
         completion = {
           nvim_cmp = true,
