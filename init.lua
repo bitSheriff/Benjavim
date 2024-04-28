@@ -423,7 +423,15 @@ local servers = {
 
   -- markdown & co
   ltex = {
-    language = { "en", "de-AT" },
+    ltex = {
+      language = "auto",
+      disabledRules = {
+        ["en"]    = { "MORFOLOGIK_RULE_EN" },
+        ["en-GB"] = { "MORFOLOGIK_RULE_EN_GB" },
+        ["en-US"] = { "MORFOLOGIK_RULE_EN_US" },
+        ["de"]    = { "MORFOLOGIK_RULE_DE_DE", "LEERZEICHEN_VOR_AUSRUFEZEICHEN_ETC", "DE_SENTENCE_WHITESPACE" },
+      },
+    }
   },
   texlab = {},
   marksman = {},
