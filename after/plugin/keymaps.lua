@@ -11,6 +11,8 @@ end
 
 -- quickly quit nvim
 map("n", "<C-q>", "<cmd> :q <cr>")
+-- quickly save buffer
+map("n", "<C-s>", "<cmd> :w <cr>")
 
 -- better up/down
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
