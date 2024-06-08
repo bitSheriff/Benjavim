@@ -28,6 +28,7 @@ local parse = require("luasnip.util.parser").parse_snippet
 require("custom.plugins.snippets.markdown")
 require("custom.plugins.snippets.tex")
 require("custom.plugins.snippets.c")
+require("custom.plugins.snippets.python")
 
 
 -- i dont know if this is needed
@@ -36,6 +37,7 @@ ls.filetype_extend("h", { "c" })
 ls.filetype_extend("tex", { "latex", "tex" })
 ls.filetype_extend("tex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("plaintex", { "plaintex", "latex", "tex" })
+ls.filetype_extend("python", { "py", })
 
 --
 -- FUNCTIONS
