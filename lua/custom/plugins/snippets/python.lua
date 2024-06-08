@@ -30,3 +30,10 @@ ls.add_snippets("py", {
     t({ "#!/usr/bin/python3" })
   })
 })
+
+-- snippet for name is main
+ls.add_snippets("py", {
+  s("name is main", {
+    t({ "if __name__ == \"__main__\":", "    main()" })
+  })
+})
