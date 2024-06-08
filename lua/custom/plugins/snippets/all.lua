@@ -29,6 +29,7 @@ require("custom.plugins.snippets.markdown")
 require("custom.plugins.snippets.tex")
 require("custom.plugins.snippets.c")
 require("custom.plugins.snippets.python")
+require("custom.plugins.snippets.rust")
 
 
 -- i dont know if this is needed
@@ -38,6 +39,7 @@ ls.filetype_extend("tex", { "latex", "tex" })
 ls.filetype_extend("tex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("plaintex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("python", { "py", })
+ls.filetype_extend("rust", { "rs", })
 
 --
 -- FUNCTIONS
