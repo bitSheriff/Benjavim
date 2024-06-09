@@ -31,6 +31,7 @@ require("custom.plugins.snippets.c")
 require("custom.plugins.snippets.python")
 require("custom.plugins.snippets.rust")
 require("custom.plugins.snippets.vhdl")
+require("custom.plugins.snippets.shell")
 
 
 -- i dont know if this is needed
@@ -42,6 +43,7 @@ ls.filetype_extend("plaintex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("python", { "py", })
 ls.filetype_extend("rust", { "rs", })
 ls.filetype_extend("vhdl", { "vhd", })
+ls.filetype_extend("shell", { "sh", "bash" })
 
 --
 -- FUNCTIONS
