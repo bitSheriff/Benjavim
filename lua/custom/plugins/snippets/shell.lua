@@ -27,6 +27,6 @@ local parse = require("luasnip.util.parser").parse_snippet
 -- snippet for shebang
 ls.add_snippets("sh", {
   s("shebang", {
-    t({ "#!/usr/bash" })
+    t({ "#!/bin/bash" })
   })
 })
