@@ -461,6 +461,9 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
+-- no idea why this does not work with setup_handlers
+require('lspconfig').marksman.setup {}
+
 mason_lspconfig.setup_handlers {
   function(server_name)
     require('lspconfig')[server_name].setup {
