@@ -1,7 +1,16 @@
 -- Tools and plugins for writing
 return {
   -- Tools for LaTeX and markdown
-  "lervag/vimtex",
+
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
+    end
+  },
+
   "junegunn/goyo.vim", -- distraction-free writing
 
   -- Obidian and Markdown stuff
