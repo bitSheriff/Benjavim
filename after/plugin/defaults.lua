@@ -9,6 +9,9 @@ opt.clipboard = "unnamedplus"
 -- Scrolling
 opt.so = 999 -- keep cursor in the middle
 
+-- Folding
+opt.foldlevel = 99 -- no automatic folding
+
 -- Indenting
 opt.expandtab = true
 opt.shiftwidth = 4
