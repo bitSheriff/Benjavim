@@ -20,6 +20,16 @@ return {
     -- build = "cd app && yarn install",
     build = ":call mkdp#util#install()", -- if it does not work out of the box, call this function by hand ":call mkdp#util#install()"
   },
+  {
+    'MeanderingProgrammer/markdown.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- Mandatory
+      'nvim-tree/nvim-web-devicons',     -- Optional but recommended
+    },
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  },
 
   -- Obsidian inside nvim
   {
@@ -54,7 +64,6 @@ return {
     end,
   },
 
-  "preservim/vim-markdown",
   "godlygeek/tabular",
 
   -- for better word wrapping
