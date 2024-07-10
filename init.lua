@@ -421,6 +421,10 @@ local servers = {
 
   rust_analyzer = {},
 
+  bashls = {},
+
+  cpptools = {},
+
   -- markdown & co
   ltex = {
     ltex = {
