@@ -423,8 +423,6 @@ local servers = {
 
   bashls = {},
 
-  cpptools = {},
-
   -- markdown & co
   ltex = {
     ltex = {
