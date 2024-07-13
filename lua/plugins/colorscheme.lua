@@ -9,8 +9,14 @@ return {
   },
 
   "EdenEast/nightfox.nvim",
-  "folke/tokyonight.nvim",
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "night" },
+  },
+
   { "catppuccin/nvim", name = "catppuccin" },
+
   {
     "LunarVim/synthwave84.nvim",
     config = function()
