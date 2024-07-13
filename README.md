@@ -1,4 +1,8 @@
-# 💤 LazyVim
+# Benjavim Readme
+*Configuration of the neovim "IDE", modified by bitSheriff*
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## Additional needed packages
+- xclip
+- fzf
+- ripgrep
+
