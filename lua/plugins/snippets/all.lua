@@ -25,14 +25,13 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
 -- require and load all the other snippets
-require("custom.plugins.snippets.markdown")
-require("custom.plugins.snippets.tex")
-require("custom.plugins.snippets.c")
-require("custom.plugins.snippets.python")
-require("custom.plugins.snippets.rust")
-require("custom.plugins.snippets.vhdl")
-require("custom.plugins.snippets.shell")
-
+require("plugins.snippets.markdown")
+require("plugins.snippets.tex")
+require("plugins.snippets.c")
+require("plugins.snippets.python")
+require("plugins.snippets.rust")
+require("plugins.snippets.vhdl")
+require("plugins.snippets.shell")
 
 -- i dont know if this is needed
 ls.filetype_extend("cpp", { "c" })
@@ -41,19 +40,19 @@ ls.filetype_extend("tex", { "latex", "tex" })
 ls.filetype_extend("tex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("plaintex", { "plaintex", "latex", "tex" })
 ls.filetype_extend("python", { "py", "ipynb" })
-ls.filetype_extend("rust", { "rs", })
-ls.filetype_extend("vhdl", { "vhd", })
+ls.filetype_extend("rust", { "rs" })
+ls.filetype_extend("vhdl", { "vhd" })
 ls.filetype_extend("shell", { "sh", "bash" })
 
 --
 -- FUNCTIONS
 --
 local date = function()
-  return { os.date "%Y-%m-%d" }
+  return { os.date("%Y-%m-%d") }
 end
 
 local time = function()
-  return { os.date "%H:%m" }
+  return { os.date("%H:%m") }
 end
 -- -------------------
 -- SNIPPETS
@@ -61,7 +60,7 @@ end
 
 -- stupid snippet for testing
 ls.add_snippets("all", {
-  s("blub", { t("BliBlaBlub") })
+  s("blub", { t("BliBlaBlub") }),
 })
 
 -- insert time
