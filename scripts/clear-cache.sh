@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
+rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
