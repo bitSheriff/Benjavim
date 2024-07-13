@@ -1,3 +1,6 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
 local opt = vim.opt
 local g = vim.g
 
@@ -20,13 +23,9 @@ opt.autoindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 
--- Set the Theme
-vim.cmd [[colorscheme dracula]]
-
-
-vim.cmd [[set spelllang=en,de]]
+vim.cmd([[set spelllang=en,de]])
 
 vim.opt.conceallevel = 1
 
 -- set soft wrapping as default
-require('wrapping').soft_wrap_mode()
+-- require("wrapping").soft_wrap_mode()
