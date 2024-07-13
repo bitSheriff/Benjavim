@@ -27,6 +27,7 @@ return {
           "codelldb",
           "debugpy",
           "bash-language-server",
+          "python-lsp-server",
         },
       },
     },
@@ -54,7 +55,6 @@ return {
         -- Update this to ensure that you have the debuggers for the langs you want
         "codelldb",
         "debugpy",
-        "bash-language-server",
       },
     })
 
