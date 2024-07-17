@@ -8,7 +8,7 @@ return {
     init = function()
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "zathura"
-    end
+    end,
   },
 
   "junegunn/goyo.vim", -- distraction-free writing
@@ -21,13 +21,13 @@ return {
     build = ":call mkdp#util#install()", -- if it does not work out of the box, call this function by hand ":call mkdp#util#install()"
   },
   {
-    'MeanderingProgrammer/markdown.nvim',
+    "MeanderingProgrammer/markdown.nvim",
     dependencies = {
-      'nvim-treesitter/nvim-treesitter', -- Mandatory
-      'nvim-tree/nvim-web-devicons',     -- Optional but recommended
+      "nvim-treesitter/nvim-treesitter", -- Mandatory
+      "nvim-tree/nvim-web-devicons", -- Optional but recommended
     },
     config = function()
-      require('render-markdown').setup({})
+      require("render-markdown").setup({})
     end,
   },
 
@@ -41,7 +41,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = function()
-      require("obsidian").setup {
+      require("obsidian").setup({
 
         workspaces = {
           {
@@ -60,7 +60,7 @@ return {
           folder = "Journal/Entries/Daily",
         },
         disable_frontmatter = true, -- dont let obsidian.nvim change the frontmatter
-      }
+      })
     end,
   },
 
@@ -70,7 +70,11 @@ return {
   {
     "andrewferrier/wrapping.nvim",
     config = function()
-      require("wrapping").setup({ notify_on_switch = false, create_keymappings = false, })
-    end
+      require("wrapping").setup({
+        notify_on_switch = false,
+        create_keymappings = true,
+      })
+      require("wrapping").soft_wrap_mode() -- soft wrapping is default
+    end,
   },
 }
