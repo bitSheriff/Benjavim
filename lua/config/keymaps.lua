@@ -24,7 +24,7 @@ map("n", "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- searching
-map("n", "<leader>sr", require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+map("n", "<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 map("n", "<leader>ss", "<cmd>Telescope live_grep<cr>", { silent = true, desc = "Search in the current file" })
 map("n", "<leader>st", "<cmd> TodoTelescope <cr>", { desc = "[S]earch [T]odos" })
 
@@ -48,7 +48,12 @@ map("n", "<leader>ls", "<cmd>Lazy sync <cr>", { desc = "call [L]azy [S]ync" })
 map("n", "<leader>lu", "<cmd>Lazy update <cr>", { desc = "call [L]azy [U]pdate" })
 
 -- terminal
-map("n", "<leader>th", "<cmd> ToggleTerm size=10 direction=horizontal <cr>", { desc = " [T]erminal [H]orizontal Toggle" })
+map(
+  "n",
+  "<leader>th",
+  "<cmd> ToggleTerm size=10 direction=horizontal <cr>",
+  { desc = " [T]erminal [H]orizontal Toggle" }
+)
 map("n", "<leader>tv", "<cmd> ToggleTerm size=60 direction=vertical <cr>", { desc = " [T]erminal [V]ertical Toggle" })
 map("n", "<leader>tf", "<cmd> ToggleTerm size=60 direction=float <cr>", { desc = " [T]erminal [F]loat Toggle" })
 
@@ -67,7 +72,6 @@ map("n", "<leader>au", "<cmd> UndotreeToggle <cr>", { desc = "[A]ction toggle [u
 map("n", "<leader>aw", "<cmd> SudaWrite <cr>", { desc = "[A]ction [w]rite file with sudo" })
 map("n", "<leader>at", "<cmd> TodoTelescope <cr>", { desc = "[A]ction show [T]odo" })
 
-
 -- builds
 map("n", "<leader>bm", "<cmd> MarkdownPreview <cr>", { desc = "[b]uild [m]arkdown" })
 map("n", "<leader>bl", "<cmd> VimtexCompile <cr>", { desc = "[b]uild [l]atex" })
@@ -79,7 +83,6 @@ map("n", "<leader>bcd", "<cmd> make doc <cr>", { desc = "[b]uild [c] make [d]oc"
 map("n", "<leader>brb", "<cmd> !cargo build <cr>", { desc = "[b]uild [r]ust just [b]uild" })
 map("n", "<leader>brr", "<cmd> !cargo run <cr>", { desc = "[b]uild [r]ust [r]un" })
 
-
 map("n", "<leader>d.", "<cmd> DapContinue <cr>", { desc = "[D]ebug [R]un / Continue" })
 map("n", "<leader>d#", "<cmd> DapToggleBreakpoint <cr>", { desc = "[D]ebug [B]reakpoint" })
 map("n", "<leader>d,", "<cmd> DapStepInto <cr>", { desc = "[D]ebug Step Into" })
@@ -88,3 +91,6 @@ map("n", "<leader>d_", "<cmd> DapStepOut <cr>", { desc = "[D]ebug Step Out" })
 
 -- windows (=> panes)
 map("n", "<C-w>N", "<cmd> vnew <cr>", { desc = "[W]indow create [N]ew vertical window" })
+
+-- add empty line below
+map("n", "<leader><Enter>", "o <ESC>", { desc = "Add empty line below" })
