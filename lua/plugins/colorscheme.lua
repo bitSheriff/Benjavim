@@ -37,6 +37,13 @@ return {
 
   "rebelot/kanagawa.nvim",
   "maxmx03/dracula.nvim",
+
+  {
+    "eldritch-theme/eldritch.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }
 
 -- theme will be set in the after/plugin/defaults.lua file
