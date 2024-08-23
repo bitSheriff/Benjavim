@@ -23,8 +23,6 @@ opt.autoindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 
-vim.cmd([[set spelllang=en,de]])
-
 vim.opt.conceallevel = 1
 
 -- set soft wrapping as default
