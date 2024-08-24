@@ -10,7 +10,7 @@ opt.relativenumber = true
 opt.clipboard = "unnamedplus"
 
 -- Scrolling
-opt.so = 999 -- keep cursor in the middle
+-- opt.so = 999 -- keep cursor in the middle
 
 -- Folding
 opt.foldlevel = 99 -- no automatic folding
