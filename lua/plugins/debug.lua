@@ -28,6 +28,7 @@ return {
           "debugpy",
           "bash-language-server",
           "python-lsp-server",
+          "rust-analyzer",
         },
       },
     },

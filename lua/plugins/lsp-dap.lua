@@ -33,17 +33,23 @@ return {
   -- Tools for Rust
   {
     "mrcjkb/rustaceanvim",
-    version = "^4", -- Recommended
+    version = "^5", -- Recommended
+    lazy = false,
     ft = { "rust" },
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
   },
 
-  {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function()
-      vim.g.rustfmt_autosave = 1
-    end,
-  },
+  -- {
+  --   "rust-lang/rust.vim",
+  --   ft = "rust",
+  --   init = function()
+  --     vim.g.rustfmt_autosave = 1
+  --   end,
+  -- },
 
   {
     "mfussenegger/nvim-dap-python",
