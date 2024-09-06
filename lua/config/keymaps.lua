@@ -30,6 +30,7 @@ map("n", "<leader>st", "<cmd> TodoTelescope <cr>", { desc = "[S]earch [T]odos" }
 
 -- toggle the build in file explorer
 map("n", "<leader>n", "<cmd>Neotree toggle<cr>", { silent = true, desc = "Open [N]eotree" })
+map("n", "<leader>N", "<cmd>Oil<cr>", { silent = true, desc = "Open Oil" })
 
 -- Redo
 map("n", "<S>u", "<cmd>redo<cr>", { silent = true, desc = "Redo" })
@@ -72,7 +73,9 @@ map("n", "<leader>au", "<cmd> UndotreeToggle <cr>", { desc = "[A]ction toggle [u
 map("n", "<leader>aw", "<cmd> SudaWrite <cr>", { desc = "[A]ction [w]rite file with sudo" })
 map("n", "<leader>at", "<cmd> TodoTelescope <cr>", { desc = "[A]ction show [T]odo" })
 
+---------
 -- builds
+---------
 map("n", "<leader>bm", "<cmd> MarkdownPreview <cr>", { desc = "[b]uild [m]arkdown" })
 map("n", "<leader>bl", "<cmd> VimtexCompile <cr>", { desc = "[b]uild [l]atex" })
 map("n", "<leader>bj", "<cmd> JustSelect <cr>", { desc = "[b]uild [j]ust" })
