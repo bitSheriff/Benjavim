@@ -87,4 +87,9 @@ return {
       })
     end,
   },
+
+  {
+    "NoahTheDuke/vim-just",
+    ft = { "just" },
+  },
 }
