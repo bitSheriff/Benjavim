@@ -84,6 +84,7 @@ map("n", "<leader>bcd", "<cmd> make doc <cr>", { desc = "[b]uild [c] make [d]oc"
 map("n", "<leader>brb", "<cmd> !cargo build <cr>", { desc = "[b]uild [r]ust just [b]uild" })
 map("n", "<leader>brr", "<cmd> !cargo run <cr>", { desc = "[b]uild [r]ust [r]un" })
 
+-- Debugging
 map("n", "<leader>d.", "<cmd> DapContinue <cr>", { desc = "[D]ebug [R]un / Continue" })
 map("n", "<leader>d#", "<cmd> DapToggleBreakpoint <cr>", { desc = "[D]ebug [B]reakpoint" })
 map("n", "<leader>d,", "<cmd> DapStepInto <cr>", { desc = "[D]ebug Step Into" })

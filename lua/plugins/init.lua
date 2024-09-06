@@ -10,14 +10,6 @@ return {
 
   "folke/which-key.nvim",
 
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("todo-comments").setup({})
-    end,
-  },
-
   -- new jump and search plugin
   {
     "folke/flash.nvim",
@@ -53,26 +45,11 @@ return {
     },
   },
 
-  -- git stuff
-  "kdheepak/lazygit.nvim",
-
   -- better terminal
   { "akinsho/toggleterm.nvim", version = "*", config = true },
 
   -- sourrund selection
   "tpope/vim-surround",
-
-  -- zen mode
-  {
-    "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
-    end,
-  },
 
   -- sticky scroll
   "nvim-treesitter/nvim-treesitter-context",
@@ -95,7 +72,4 @@ return {
 
   -- undotree
   { "mbbill/undotree" },
-
-  -- plugin to open file with sudo
-  { "lambdalisue/suda.vim" },
 }
