@@ -6,15 +6,11 @@ return {
     -- build = "cd app && yarn install",
     build = ":call mkdp#util#install()", -- if it does not work out of the box, call this function by hand ":call mkdp#util#install()"
   },
+
   {
-    "MeanderingProgrammer/markdown.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter", -- Mandatory
-      "nvim-tree/nvim-web-devicons", -- Optional but recommended
-    },
-    config = function()
-      require("render-markdown").setup({})
-    end,
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {},
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
 
   -- Obsidian inside nvim
