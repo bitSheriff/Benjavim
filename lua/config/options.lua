@@ -9,6 +9,7 @@ opt.relativenumber = true
 
 opt.clipboard = "unnamedplus"
 
+vim.opt.mouse = "" -- disable mouse
 -- Scrolling
 -- opt.so = 999 -- keep cursor in the middle
 
