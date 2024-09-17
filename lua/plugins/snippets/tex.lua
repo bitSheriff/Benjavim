@@ -24,18 +24,48 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
-
 ---
 -- MATH snippets
---- 
+---
 
 -- snippet for fraction
 ls.add_snippets("tex", {
   s("\\frac", {
-    t({"\\frac{"}),
+    t({ "\\frac{" }),
     i(1),
-    t({"}{"}),
+    t({ "}{" }),
     i(2),
-    t({"}"})
-  })
+    t({ "}" }),
+  }),
+})
+
+---
+-- TEXT snippets
+---
+
+-- snippet for inline code text (monospaced)
+ls.add_snippets("tex", {
+  s("\\ttt", {
+    t({ "\\texttt{" }),
+    i(1),
+    t({ "}" }),
+  }),
+})
+
+-- snippet for bold text
+ls.add_snippets("tex", {
+  s("\\bf", {
+    t({ "\\textbf{" }),
+    i(1),
+    t({ "}" }),
+  }),
+})
+
+-- snippet for italic text
+ls.add_snippets("tex", {
+  s("\\it", {
+    t({ "\\textit{" }),
+    i(1),
+    t({ "}" }),
+  }),
 })

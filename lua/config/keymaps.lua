@@ -72,7 +72,7 @@ map("n", "<leader>as", "<cmd> set spell! <cr>", { desc = "[A]ction toggle [s]pel
 map("n", "<leader>au", "<cmd> UndotreeToggle <cr>", { desc = "[A]ction toggle [u]ndotree" })
 map("n", "<leader>aw", "<cmd> SudaWrite <cr>", { desc = "[A]ction [w]rite file with sudo" })
 map("n", "<leader>at", "<cmd> TodoTelescope <cr>", { desc = "[A]ction show [T]odo" })
-map("n", "<leader>aW", "<cmd> ToggleWrapMode <cr>", { desc = "[A]ction [W]rap Mode Toggle" })
+map("n", "<leader>ww", "<cmd> ToggleWrapMode <cr>", { desc = "[A]ction [W]rap Mode Toggle" })
 
 ---------
 -- builds
