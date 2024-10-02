@@ -74,7 +74,7 @@ return {
       "j-hui/fidget.nvim",
     },
     config = function()
-      require("just").setup({
+      require("runme").setup({
         fidget_message_limit = 32, -- limit for length of fidget progress message
         play_sound = false, -- plays sound when task is finished or failed
         open_qf_on_error = true, -- opens quickfix when task fails
