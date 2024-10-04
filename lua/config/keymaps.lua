@@ -73,6 +73,7 @@ map("n", "<leader>au", "<cmd> UndotreeToggle <cr>", { desc = "[A]ction toggle [u
 map("n", "<leader>aw", "<cmd> SudaWrite <cr>", { desc = "[A]ction [w]rite file with sudo" })
 map("n", "<leader>at", "<cmd> TodoTelescope <cr>", { desc = "[A]ction show [T]odo" })
 map("n", "<leader>ww", "<cmd> ToggleWrapMode <cr>", { desc = "[A]ction [W]rap Mode Toggle" })
+map("n", "<leader>ap", "<cmd> :lua require('minty.huefy').open() <cr>", { desc = "[A]ction [P]ick Color" })
 
 ---------
 -- builds
