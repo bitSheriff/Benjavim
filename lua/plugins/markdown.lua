@@ -10,13 +10,14 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     opts = {},
+    enabled = false,
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
 
   -- Obsidian inside nvim
   {
     "epwalsh/obsidian.nvim",
-    enabled = false,
+    enabled = true,
     version = "*", -- latest version instead of latest commit
     dependencies = {
       -- Required.
