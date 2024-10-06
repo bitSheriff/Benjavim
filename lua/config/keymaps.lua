@@ -59,11 +59,12 @@ map("n", "<leader>tv", "<cmd> ToggleTerm size=60 direction=vertical <cr>", { des
 map("n", "<leader>tf", "<cmd> ToggleTerm size=60 direction=float <cr>", { desc = " [T]erminal [F]loat Toggle" })
 
 -- Obsidian Workspace
-map("n", "<leader>oq", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
+map("n", "<leader>oo", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
 map("n", "<leader>ot", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday" })
 map("n", "<leader>og", "<cmd> ObsidianFollowLink <cr>", { desc = "[O]bsidian [G]o to Link" })
 map("n", "<leader>os", "<cmd> ObsidianSearch <cr>", { desc = "[O]bsidian [S]earch" })
 map("n", "<leader>oc", "<cmd> ObsidianToggleCheckbox <cr>", { desc = "[O]bsidian [C]heckbox" })
+map("n", "<leader>op", require("obsidian").util.smart_action(), { desc = "[O]bsidian [C]heckbox" })
 
 -- actions
 map("n", "<leader>af", "gg=G", { desc = "[A]ction code [f]ormat while file" })
