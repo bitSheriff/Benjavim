@@ -42,6 +42,15 @@ map("n", "<A-Up>", "<cmd> :m . -2 <cr>")
 -- Tabs
 map("n", "<TAB>", "<cmd> BufferLineCycleNext <cr>", { desc = "goto next buffer" })
 map("n", "<S-TAB>", "<cmd> BufferLineCyclePrev <cr>", { desc = "goto prev buffer" })
+map(
+  "n",
+  "gb",
+  require("snipe").create_buffer_menu_toggler({
+    -- Limit the width of path buffer names
+    max_path_width = 1,
+  }),
+  { desc = "Open Snipe buffer menu" }
+)
 
 -- lazy stuff
 map("n", "<leader>lg", "<cmd>LazyGit <cr>", { desc = "call [L]azy[G]it" })
