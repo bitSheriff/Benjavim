@@ -67,6 +67,7 @@ return {
   -- plugin to run justfiles
   {
     "al1-ce/just.nvim",
+    enabled = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",

@@ -44,6 +44,8 @@ return {
     priority = 1000,
     opts = {},
   },
+
+  { "savq/melange-nvim" },
 }
 
 -- theme will be set in the after/plugin/defaults.lua file
