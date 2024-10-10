@@ -8,7 +8,8 @@ return {
     },
   },
 
-  "EdenEast/nightfox.nvim",
+  { "EdenEast/nightfox.nvim" },
+
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -35,8 +36,8 @@ return {
     end,
   },
 
-  "rebelot/kanagawa.nvim",
-  "maxmx03/dracula.nvim",
+  { "rebelot/kanagawa.nvim" },
+  { "maxmx03/dracula.nvim" },
 
   {
     "eldritch-theme/eldritch.nvim",
