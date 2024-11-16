@@ -2,9 +2,6 @@ return {
   -- git stuff
   "kdheepak/lazygit.nvim",
 
-  -- plugin to open file with sudo
-  { "lambdalisue/suda.vim" },
-
   -- highlight todo comments
   {
     "folke/todo-comments.nvim",
