@@ -27,16 +27,16 @@ local parse = require("luasnip.util.parser").parse_snippet
 -- snippet for unit test module
 ls.add_snippets("rs", {
   s("unit tests", {
-    t({ "#[allow(dead_code)]",
+    t({
+      "#[allow(dead_code)]",
       "#[cfg(test)]",
       "mod unit_tests {",
       "    use super::*;",
       "",
-      "}"
+      "}",
     }),
-  })
+  }),
 })
-
 
 -- snippet for unit test function
 ls.add_snippets("rs", {
@@ -46,5 +46,12 @@ ls.add_snippets("rs", {
     t({ "(" }),
     i(2),
     t({ "){", "}" }),
-  })
+  }),
+})
+
+-- snippet dead code allow
+ls.add_snippets("rs", {
+  s("dead code", {
+    t({ "#[allow(dead_code)]" }),
+  }),
 })
