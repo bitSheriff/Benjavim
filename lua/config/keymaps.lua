@@ -24,7 +24,6 @@ map("n", "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- searching
-map("n", "<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 map("n", "<leader>ss", "<cmd>Telescope live_grep<cr>", { silent = true, desc = "Search in the current file" })
 map("n", "<leader>st", "<cmd> TodoTelescope <cr>", { desc = "[S]earch [T]odos" })
 
