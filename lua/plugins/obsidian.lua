@@ -21,7 +21,7 @@ return {
           subdir = "_templates",
         },
         completion = {
-          nvim_cmp = true,
+          -- nvim_cmp = true,
           min_chars = 2,
         },
         daily_notes = {
