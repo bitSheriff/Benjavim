@@ -11,4 +11,19 @@ return {
       require("better_escape").setup()
     end,
   },
+
+  -- use black hole register for deleting
+  {
+    "gbprod/cutlass.nvim",
+    opts = {
+      cut_key = nil,
+      override_del = nil,
+      exclude = {},
+      registers = {
+        select = "_",
+        delete = "_",
+        change = "_",
+      },
+    },
+  },
 }
