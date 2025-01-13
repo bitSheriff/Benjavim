@@ -29,8 +29,8 @@ ls.add_snippets("markdown", {
   s("underline", {
     t({ "<u>" }),
     i(1),
-    t({ "</u>" })
-  })
+    t({ "</u>" }),
+  }),
 })
 
 -- snippet for comment
@@ -38,8 +38,8 @@ ls.add_snippets("markdown", {
   s("comment", {
     t({ "%" }),
     i(1),
-    t({ "%" })
-  })
+    t({ "%" }),
+  }),
 })
 
 -- todos
@@ -47,57 +47,56 @@ ls.add_snippets("markdown", {
   s("todo", {
     t({ "- [ ] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo incomplete", {
     t({ "- [/] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo done", {
     t({ "- [x] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo cancled", {
     t({ "- [-] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo forwarded", {
     t({ "- [>] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo scheduling", {
     t({ "- [<] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("todo question", {
     t({ "- [?] " }),
     i(1),
-  })
+  }),
 })
-
 
 ls.add_snippets("markdown", {
   s("todo important", {
     t({ "- [!] " }),
     i(1),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
@@ -105,14 +104,14 @@ ls.add_snippets("markdown", {
     -- code begin and langauge
     t({ "```", "" }),
     i(1),
-    t({ "", "```" })
-  })
+    t({ "", "```" }),
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("link", {
-    t({ "[]()" }),
-  })
+    t({ "[text](url)" }),
+  }),
 })
 
 -- headings
@@ -120,32 +119,32 @@ ls.add_snippets("markdown", {
 ls.add_snippets("markdown", {
   s("h1", {
     t({ "# " }),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("h2", {
     t({ "## " }),
-  })
+  }),
 })
 
 ls.add_snippets("markdown", {
   s("h3", {
     t({ "### " }),
-  })
+  }),
 })
 ls.add_snippets("markdown", {
   s("h4", {
     t({ "#### " }),
-  })
+  }),
 })
 ls.add_snippets("markdown", {
   s("h5", {
     t({ "##### " }),
-  })
+  }),
 })
 ls.add_snippets("markdown", {
   s("h6", {
     t({ "###### " }),
-  })
+  }),
 })
