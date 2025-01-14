@@ -9,7 +9,7 @@ opt.relativenumber = true
 
 opt.clipboard = "unnamedplus"
 
-vim.opt.mouse = "" -- disable mouse
+opt.mouse = "" -- disable mouse
 -- Scrolling
 -- opt.so = 999 -- keep cursor in the middle
 
@@ -24,18 +24,7 @@ opt.autoindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 
-vim.opt.conceallevel = 1
+opt.conceallevel = 1
 
--- save the colorscheme
-vim.api.nvim_create_autocmd("VimEnter", {
-  nested = true,
-  callback = function()
-    pcall(vim.cmd.colorscheme, vim.g.SCHEME)
-  end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = function(params)
-    vim.g.SCHEME = params.match
-  end,
-})
+-- disable spelling per default
+vim.cmd("set nospell")
