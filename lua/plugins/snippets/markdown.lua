@@ -119,32 +119,59 @@ ls.add_snippets("markdown", {
 ls.add_snippets("markdown", {
   s("h1", {
     t({ "# " }),
+    i(1),
   }),
 })
 
 ls.add_snippets("markdown", {
   s("h2", {
     t({ "## " }),
+    i(1),
   }),
 })
 
 ls.add_snippets("markdown", {
   s("h3", {
     t({ "### " }),
+    i(1),
   }),
 })
 ls.add_snippets("markdown", {
   s("h4", {
     t({ "#### " }),
+    i(1),
   }),
 })
 ls.add_snippets("markdown", {
   s("h5", {
     t({ "##### " }),
+    i(1),
   }),
 })
 ls.add_snippets("markdown", {
   s("h6", {
     t({ "###### " }),
+    i(1),
+  }),
+})
+
+ls.add_snippets("markdown", {
+  s("note", {
+    t({ "> [!NOTE]", "> " }),
+    i(1),
+  }),
+})
+
+ls.add_snippets("markdown", {
+  s("bug", {
+    t({ "> [!BUG]", "> " }),
+    i(1),
+  }),
+})
+
+ls.add_snippets("markdown", {
+  s("tip", {
+    t({ "> [!TIP]", "> " }),
+    i(1),
   }),
 })
