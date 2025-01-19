@@ -18,10 +18,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
--- autocmd for disabling word suggestions in markdown files using blink.cmp
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
-        vim.b.completion = false
+        vim.opt_local.spell = false
     end,
 })
