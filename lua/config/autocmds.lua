@@ -4,16 +4,24 @@
 
 -- save the colorscheme
 vim.api.nvim_create_autocmd("VimEnter", {
-  nested = true,
-  callback = function()
-    pcall(vim.cmd.colorscheme, vim.g.SCHEME)
-  end,
+    nested = true,
+    callback = function()
+        pcall(vim.cmd.colorscheme, vim.g.SCHEME)
+    end,
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = function(params)
-    vim.g.SCHEME = params.match
-  end,
+    callback = function(params)
+        vim.g.SCHEME = params.match
+    end,
 })
 
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- autocmd for disabling word suggestions in markdown files using blink.cmp
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.b.completion = false
+    end,
+})
