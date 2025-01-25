@@ -32,6 +32,7 @@ require("plugins.snippets.python")
 require("plugins.snippets.rust")
 require("plugins.snippets.vhdl")
 require("plugins.snippets.shell")
+require("plugins.snippets.hugo")
 
 -- i dont know if this is needed
 ls.filetype_extend("cpp", { "c" })
@@ -48,43 +49,38 @@ ls.filetype_extend("shell", { "sh", "bash" })
 -- FUNCTIONS
 --
 local date = function()
-  return { os.date("%Y-%m-%d") }
+    return { os.date("%Y-%m-%d") }
 end
 
 local time = function()
-  return { os.date("%H:%m") }
+    return { os.date("%H:%m") }
 end
 -- -------------------
 -- SNIPPETS
 -- -------------------
 
--- stupid snippet for testing
-ls.add_snippets("all", {
-  s("blub", { t("BliBlaBlub") }),
-})
-
 -- insert time
 ls.add_snippets(nil, {
-  all = {
-    s({
-      trig = "time",
-      namr = "Time",
-      dscr = "Time in the form of HH:mm",
-    }, {
-      f(time, {}),
-    }),
-  },
+    all = {
+        s({
+            trig = "time",
+            namr = "Time",
+            dscr = "Time in the form of HH:mm",
+        }, {
+            f(time, {}),
+        }),
+    },
 })
 
 -- insert date
 ls.add_snippets(nil, {
-  all = {
-    s({
-      trig = "date",
-      namr = "Date",
-      dscr = "Date in the form of YYYY-MM-DD",
-    }, {
-      f(date, {}),
-    }),
-  },
+    all = {
+        s({
+            trig = "date",
+            namr = "Date",
+            dscr = "Date in the form of YYYY-MM-DD",
+        }, {
+            f(date, {}),
+        }),
+    },
 })

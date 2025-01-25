@@ -175,13 +175,3 @@ ls.add_snippets("markdown", {
         i(1),
     }),
 })
-
--- HUGO markdown
-
-ls.add_snippets("markdown", {
-    s("hugo comment", {
-        t({ "<!--" }),
-        i(1),
-        t({ "-->" }),
-    }),
-})
