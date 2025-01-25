@@ -55,7 +55,10 @@ map(
     { desc = " [T]erminal [H]orizontal Toggle" }
 )
 map("n", "<leader>tv", "<cmd> ToggleTerm size=60 direction=vertical <cr>", { desc = " [T]erminal [V]ertical Toggle" })
-map("n", "<leader>tf", "<cmd> ToggleTerm size=60 direction=float <cr>", { desc = " [T]erminal [F]loat Toggle" })
+map("n", "<leader>tf", "<cmd> ToggleTerm direction=float <cr>", { desc = " [T]erminal [F]loat Toggle" })
+
+-- Memo
+map("n", "<leader>m", "<cmd> TermExec direction=float cmd='memo && exit 0' <cr>", { desc = "[M]emo to daily note" })
 
 -- Obsidian Workspace
 map("n", "<leader>oo", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
