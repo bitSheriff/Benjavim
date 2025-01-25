@@ -26,152 +26,162 @@ local parse = require("luasnip.util.parser").parse_snippet
 
 -- snippet for underline text
 ls.add_snippets("markdown", {
-  s("underline", {
-    t({ "<u>" }),
-    i(1),
-    t({ "</u>" }),
-  }),
+    s("underline", {
+        t({ "<u>" }),
+        i(1),
+        t({ "</u>" }),
+    }),
 })
 
 -- snippet for comment
 ls.add_snippets("markdown", {
-  s("comment", {
-    t({ "%" }),
-    i(1),
-    t({ "%" }),
-  }),
+    s("comment", {
+        t({ "%" }),
+        i(1),
+        t({ "%" }),
+    }),
 })
 
 -- todos
 ls.add_snippets("markdown", {
-  s("todo", {
-    t({ "- [ ] " }),
-    i(1),
-  }),
+    s("todo", {
+        t({ "- [ ] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo incomplete", {
-    t({ "- [/] " }),
-    i(1),
-  }),
+    s("todo incomplete", {
+        t({ "- [/] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo done", {
-    t({ "- [x] " }),
-    i(1),
-  }),
+    s("todo done", {
+        t({ "- [x] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo cancled", {
-    t({ "- [-] " }),
-    i(1),
-  }),
+    s("todo cancled", {
+        t({ "- [-] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo forwarded", {
-    t({ "- [>] " }),
-    i(1),
-  }),
+    s("todo forwarded", {
+        t({ "- [>] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo scheduling", {
-    t({ "- [<] " }),
-    i(1),
-  }),
+    s("todo scheduling", {
+        t({ "- [<] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo question", {
-    t({ "- [?] " }),
-    i(1),
-  }),
+    s("todo question", {
+        t({ "- [?] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("todo important", {
-    t({ "- [!] " }),
-    i(1),
-  }),
+    s("todo important", {
+        t({ "- [!] " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("code block", {
-    -- code begin and langauge
-    t({ "```", "" }),
-    i(1),
-    t({ "", "```" }),
-  }),
+    s("code block", {
+        -- code begin and langauge
+        t({ "```", "" }),
+        i(1),
+        t({ "", "```" }),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("link", {
-    t({ "[text](url)" }),
-  }),
+    s("link", {
+        t({ "[text](url)" }),
+    }),
 })
 
 -- headings
 
 ls.add_snippets("markdown", {
-  s("h1", {
-    t({ "# " }),
-    i(1),
-  }),
+    s("h1", {
+        t({ "# " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("h2", {
-    t({ "## " }),
-    i(1),
-  }),
+    s("h2", {
+        t({ "## " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("h3", {
-    t({ "### " }),
-    i(1),
-  }),
+    s("h3", {
+        t({ "### " }),
+        i(1),
+    }),
 })
 ls.add_snippets("markdown", {
-  s("h4", {
-    t({ "#### " }),
-    i(1),
-  }),
+    s("h4", {
+        t({ "#### " }),
+        i(1),
+    }),
 })
 ls.add_snippets("markdown", {
-  s("h5", {
-    t({ "##### " }),
-    i(1),
-  }),
+    s("h5", {
+        t({ "##### " }),
+        i(1),
+    }),
 })
 ls.add_snippets("markdown", {
-  s("h6", {
-    t({ "###### " }),
-    i(1),
-  }),
-})
-
-ls.add_snippets("markdown", {
-  s("note", {
-    t({ "> [!NOTE]", "> " }),
-    i(1),
-  }),
+    s("h6", {
+        t({ "###### " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("bug", {
-    t({ "> [!BUG]", "> " }),
-    i(1),
-  }),
+    s("note", {
+        t({ "> [!NOTE]", "> " }),
+        i(1),
+    }),
 })
 
 ls.add_snippets("markdown", {
-  s("tip", {
-    t({ "> [!TIP]", "> " }),
-    i(1),
-  }),
+    s("bug", {
+        t({ "> [!BUG]", "> " }),
+        i(1),
+    }),
+})
+
+ls.add_snippets("markdown", {
+    s("tip", {
+        t({ "> [!TIP]", "> " }),
+        i(1),
+    }),
+})
+
+-- HUGO markdown
+
+ls.add_snippets("markdown", {
+    s("hugo comment", {
+        t({ "<!--" }),
+        i(1),
+        t({ "-->" }),
+    }),
 })

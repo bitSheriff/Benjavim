@@ -2,14 +2,14 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local function map(mode, lhs, rhs, opts)
-  local keys = require("lazy.core.handler").handlers.keys
-  ---@cast keys LazyKeysHandler
-  -- do not create the keymap if a lazy keys handler exists
-  if not keys.active[keys.parse({ lhs, mode = mode }).id] then
-    opts = opts or {}
-    opts.silent = opts.silent ~= false
-    vim.keymap.set(mode, lhs, rhs, opts)
-  end
+    local keys = require("lazy.core.handler").handlers.keys
+    ---@cast keys LazyKeysHandler
+    -- do not create the keymap if a lazy keys handler exists
+    if not keys.active[keys.parse({ lhs, mode = mode }).id] then
+        opts = opts or {}
+        opts.silent = opts.silent ~= false
+        vim.keymap.set(mode, lhs, rhs, opts)
+    end
 end
 
 -- quickly quit nvim
@@ -49,10 +49,10 @@ map("n", "<leader>lu", "<cmd>Lazy update <cr>", { desc = "call [L]azy [U]pdate" 
 
 -- terminal
 map(
-  "n",
-  "<leader>th",
-  "<cmd> ToggleTerm size=10 direction=horizontal <cr>",
-  { desc = " [T]erminal [H]orizontal Toggle" }
+    "n",
+    "<leader>th",
+    "<cmd> ToggleTerm size=10 direction=horizontal <cr>",
+    { desc = " [T]erminal [H]orizontal Toggle" }
 )
 map("n", "<leader>tv", "<cmd> ToggleTerm size=60 direction=vertical <cr>", { desc = " [T]erminal [V]ertical Toggle" })
 map("n", "<leader>tf", "<cmd> ToggleTerm size=60 direction=float <cr>", { desc = " [T]erminal [F]loat Toggle" })
