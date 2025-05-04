@@ -70,7 +70,7 @@ map("n", "<leader>oo", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Qu
 map("n", "<leader>ot", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday" })
 map("n", "<leader>og", "<cmd> ObsidianFollowLink <cr>", { desc = "[O]bsidian [G]o to Link" })
 map("n", "<leader>os", "<cmd> ObsidianSearch <cr>", { desc = "[O]bsidian [S]earch" })
-map("n", "<leader>oc", "<cmd> ObsidianToggleCheckbox <cr>", { desc = "[O]bsidian [C]heckbox" })
+map("n", "<leader>o<Enter>", "<cmd> ObsidianToggleCheckbox <cr>", { desc = "[O]bsidian [C]heckbox" })
 map("n", "<leader>op", require("obsidian").util.smart_action(), { desc = "[O]bsidian [C]heckbox" })
 
 -- actions
@@ -110,4 +110,4 @@ map("n", "<leader>d_", "<cmd> DapStepOut <cr>", { desc = "[D]ebug Step Out" })
 map("n", "<C-w>N", "<cmd> vnew <cr>", { desc = "[W]indow create [N]ew vertical window" })
 
 -- add empty line below
-map("n", "<leader><Enter>", "o <ESC>", { desc = "Add empty line below" })
+-- map("n", "<leader><Enter>", "o <ESC>", { desc = "Add empty line below" })
