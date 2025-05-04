@@ -71,7 +71,7 @@ map("n", "<leader>ot", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday"
 map("n", "<leader>og", "<cmd> ObsidianFollowLink <cr>", { desc = "[O]bsidian [G]o to Link" })
 map("n", "<leader>os", "<cmd> ObsidianSearch <cr>", { desc = "[O]bsidian [S]earch" })
 map("n", "<leader>o<Enter>", "<cmd> ObsidianToggleCheckbox <cr>", { desc = "[O]bsidian [C]heckbox" })
-map("n", "<leader>op", require("obsidian").util.smart_action(), { desc = "[O]bsidian [C]heckbox" })
+map("n", "<leader>op", require("obsidian").util.smart_action(), { desc = "[O]bsidian Smart Action" })
 
 -- actions
 map("n", "<leader>af", "gg=G", { desc = "[A]ction code [f]ormat while file" })
