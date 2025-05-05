@@ -66,11 +66,11 @@ map(
 )
 
 -- Obsidian Workspace
-map("n", "<leader>oo", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
-map("n", "<leader>ot", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday" })
-map("n", "<leader>og", "<cmd> ObsidianFollowLink <cr>", { desc = "[O]bsidian [G]o to Link" })
-map("n", "<leader>os", "<cmd> ObsidianSearch <cr>", { desc = "[O]bsidian [S]earch" })
-map("n", "<leader>oc", require("obsidian").util.smart_action(), { desc = "[O]bsidian Smart Action (Checkbox)" })
+map("n", "öo", "<cmd> ObsidianQuickSwitch <cr>", { desc = "[O]bsidian Quick [S]witch" })
+map("n", "öt", "<cmd> ObsidianToday <cr>", { desc = "[O]bsidian [T]oday" })
+map("n", "ög", "<cmd> ObsidianFollowLink <cr>", { desc = "[O]bsidian [G]o to Link" })
+map("n", "ös", "<cmd> ObsidianSearch <cr>", { desc = "[O]bsidian [S]earch" })
+map("n", "öc", require("obsidian").util.smart_action(), { desc = "[O]bsidian Smart Action (Checkbox)" })
 
 -- actions
 map("n", "<leader>af", "gg=G", { desc = "[A]ction code [f]ormat while file" })
