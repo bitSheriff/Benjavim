@@ -26,6 +26,7 @@ map("n", "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 -- searching
 map("n", "<leader>ss", "<cmd>Telescope live_grep<cr>", { silent = true, desc = "Search in the current file" })
 map("n", "<leader>st", "<cmd> TodoTelescope <cr>", { desc = "[S]earch [T]odos" })
+map("n", "m.", "<cmd> Marko <cr>", { desc = "[S]earch [M]arks" })
 
 -- toggle the build in file explorer
 map("n", "<leader>n", "<cmd>Neotree toggle<cr>", { silent = true, desc = "Open [N]eotree" })
