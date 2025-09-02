@@ -2,7 +2,7 @@ return {
     -- Obsidian inside nvim
     {
         "epwalsh/obsidian.nvim",
-        enabled = true,
+        enabled = false,
         version = "*", -- latest version instead of latest commit
         dependencies = {
             -- Required.
