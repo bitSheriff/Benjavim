@@ -1,4 +1,17 @@
+---@diagnostic disable: missing-fields
+if lazyvim_docs then
+    -- set to `true` to follow the main branch
+    -- you need to have a working rust toolchain to build the plugin
+    -- in this case.
+    vim.g.lazyvim_blink_main = false
+end
+
 return {
+    {
+        "hrsh7th/nvim-cmp",
+        optional = true,
+        enabled = false,
+    },
     {
         "saghen/blink.cmp",
         version = not vim.g.lazyvim_blink_main and "*",
@@ -66,10 +79,10 @@ return {
                 -- with blink.compat
                 compat = {},
                 default = { "lsp", "path", "snippets", "buffer" },
-                per_filetype = {
-                    markdown = { "lsp", "path", "snippets" },
-                },
-                cmdline = {},
+            },
+
+            cmdline = {
+                enabled = false,
             },
 
             keymap = {
@@ -130,6 +143,7 @@ return {
                         items = transform_items and transform_items(ctx, items) or items
                         for _, item in ipairs(items) do
                             item.kind = kind_idx or item.kind
+                            item.kind_icon = LazyVim.config.icons.kinds[item.kind_name] or item.kind_icon or nil
                         end
                         return items
                     end
@@ -141,5 +155,41 @@ return {
 
             require("blink.cmp").setup(opts)
         end,
+    },
+
+    -- add icons
+    {
+        "saghen/blink.cmp",
+        opts = function(_, opts)
+            opts.appearance = opts.appearance or {}
+            opts.appearance.kind_icons =
+                vim.tbl_extend("force", opts.appearance.kind_icons or {}, LazyVim.config.icons.kinds)
+        end,
+    },
+
+    -- lazydev
+    {
+        "saghen/blink.cmp",
+        opts = {
+            sources = {
+                -- add lazydev to your completion providers
+                default = { "lazydev" },
+                providers = {
+                    lazydev = {
+                        name = "LazyDev",
+                        module = "lazydev.integrations.blink",
+                        score_offset = 100, -- show at a higher priority than lsp
+                    },
+                },
+            },
+        },
+    },
+    -- catppuccin support
+    {
+        "catppuccin",
+        optional = true,
+        opts = {
+            integrations = { blink_cmp = true },
+        },
     },
 }
