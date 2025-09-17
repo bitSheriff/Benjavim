@@ -86,4 +86,22 @@ ls.add_snippets("tex", {
 			"\\end{frame}",
 		}),
 	}),
+	s({ trig = "col2", dscr = "Beamer 2 columns" }, {
+		t({
+			"\\begin{columns}[T]",
+			"\\begin{column}{0.5\textwidth}",
+			"    "
+		}),
+		i(1),
+		t({
+			"\\end{column}",
+			"\\begin{column}{0.5\textwidth}
+			"    "
+		}),
+		i(2),
+		t({
+			"\\end{column}",
+			"\\end{columns}"
+		})
+	}),
 })
