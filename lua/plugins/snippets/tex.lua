@@ -24,95 +24,66 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
----
--- MATH snippets
----
-
--- snippet for fraction
 ls.add_snippets("tex", {
-    s("\\frac", {
-        t({ "\\frac{" }),
-        i(1),
-        t({ "}{" }),
-        i(2),
-        t({ "}" }),
-    }),
-})
+	-- MATH snippets
+	s({ trig = "\frac", dscr = "fraction" }, {
+		t({ "\\frac{" }),
+		i(1),
+		t({ "}{" }),
+		i(2),
+		t({ "}" })
+	}),
 
----
--- TEXT snippets
----
+	-- TEXT snippets
+	s({ trig = "\\ttt", dscr = "inline code text (monospaced)" }, {
+		t({ "\\texttt{" }),
+		i(1),
+		t({ "}" })
+	}),
+	s({ trig = "\\bf", dscr = "bold text" }, {
+		t({ "\\textbf{" }),
+		i(1),
+		t({ "}" })
+	}),
+	s({ trig = "\\it", dscr = "italic text" }, {
+		t({ "\\textit{" }),
+		i(1),
+		t({ "}" })
+	}),
+	s({ trig = "eq", dscr = "equation" }, {
+		t({ -- using a table of strings for multiline text
+			"\\begin{equation}",
+			"    ",
+		}),
+		i(1),
+		t({
+			"",
+			"\\end{equation}",
+		}),
+	}),
 
--- snippet for inline code text (monospaced)
-ls.add_snippets("tex", {
-    s("\\ttt", {
-        t({ "\\texttt{" }),
-        i(1),
-        t({ "}" }),
-    }),
-})
-
--- snippet for bold text
-ls.add_snippets("tex", {
-    s("\\bf", {
-        t({ "\\textbf{" }),
-        i(1),
-        t({ "}" }),
-    }),
-})
-
--- snippet for italic text
-ls.add_snippets("tex", {
-    s("\\it", {
-        t({ "\\textit{" }),
-        i(1),
-        t({ "}" }),
-    }),
-})
-
--- equation
-ls.add_snippets("tex", {
-    s("eq", {
-        t({ -- using a table of strings for multiline text
-            "\\begin{equation}",
-            "    ",
-        }),
-        i(1),
-        t({
-            "",
-            "\\end{equation}",
-        }),
-    }),
-})
----
--- LaTeX Beamer
---
-ls.add_snippets("tex", {
-    s("frame", {
-        t({ -- using a table of strings for multiline text
-            "\\begin{frame}{}",
-            "    ",
-        }),
-        i(1),
-        t({
-            "",
-            "\\end{frame}",
-        }),
-    }),
-})
-
--- Frame with Framebreak
-ls.add_snippets("tex", {
-    s("frame", {
-        t({ -- using a table of strings for multiline text
-            "\\begin{frame}[allowframebreaks]{}",
-            "    ",
-            "    \\framebreak",
-        }),
-        i(1),
-        t({
-            "",
-            "\\end{frame}",
-        }),
-    }),
+	-- LaTeX Beamer
+	s({ trig = "frame", dscr = "Beamer frame" }, {
+		t({ -- using a table of strings for multiline text
+			"\\begin{frame}{}",
+			"    ",
+		}),
+		i(1),
+		t({
+			"",
+			"\\end{frame}",
+		}),
+	}),
+	s({ trig = "frame", name = "framebreak", dscr = "Beamer frame with framebreak" }, {
+		t({ -- using a table of strings for multiline text
+			"\\begin{frame}[allowframebreaks]{}",
+			"    ",
+			"    \\framebreak",
+		}),
+		i(1),
+		t({
+			"",
+			"\\end{frame}",
+		}),
+	}),
 })
