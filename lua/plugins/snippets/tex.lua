@@ -25,83 +25,83 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
 ls.add_snippets("tex", {
-	-- MATH snippets
-	s({ trig = "\frac", dscr = "fraction" }, {
-		t({ "\\frac{" }),
-		i(1),
-		t({ "}{" }),
-		i(2),
-		t({ "}" })
-	}),
+    -- MATH snippets
+    s({ trig = "\frac", dscr = "fraction" }, {
+        t({ "\\frac{" }),
+        i(1),
+        t({ "}{" }),
+        i(2),
+        t({ "}" }),
+    }),
 
-	-- TEXT snippets
-	s({ trig = "\\ttt", dscr = "inline code text (monospaced)" }, {
-		t({ "\\texttt{" }),
-		i(1),
-		t({ "}" })
-	}),
-	s({ trig = "\\bf", dscr = "bold text" }, {
-		t({ "\\textbf{" }),
-		i(1),
-		t({ "}" })
-	}),
-	s({ trig = "\\it", dscr = "italic text" }, {
-		t({ "\\textit{" }),
-		i(1),
-		t({ "}" })
-	}),
-	s({ trig = "eq", dscr = "equation" }, {
-		t({ -- using a table of strings for multiline text
-			"\\begin{equation}",
-			"    ",
-		}),
-		i(1),
-		t({
-			"",
-			"\\end{equation}",
-		}),
-	}),
+    -- TEXT snippets
+    s({ trig = "\\ttt", dscr = "inline code text (monospaced)" }, {
+        t({ "\\texttt{" }),
+        i(1),
+        t({ "}" }),
+    }),
+    s({ trig = "\\bf", dscr = "bold text" }, {
+        t({ "\\textbf{" }),
+        i(1),
+        t({ "}" }),
+    }),
+    s({ trig = "\\it", dscr = "italic text" }, {
+        t({ "\\textit{" }),
+        i(1),
+        t({ "}" }),
+    }),
+    s({ trig = "eq", dscr = "equation" }, {
+        t({ -- using a table of strings for multiline text
+            "\\begin{equation}",
+            "    ",
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{equation}",
+        }),
+    }),
 
-	-- LaTeX Beamer
-	s({ trig = "frame", dscr = "Beamer frame" }, {
-		t({ -- using a table of strings for multiline text
-			"\\begin{frame}{}",
-			"    ",
-		}),
-		i(1),
-		t({
-			"",
-			"\\end{frame}",
-		}),
-	}),
-	s({ trig = "frame", name = "framebreak", dscr = "Beamer frame with framebreak" }, {
-		t({ -- using a table of strings for multiline text
-			"\\begin{frame}[allowframebreaks]{}",
-			"    ",
-			"    \\framebreak",
-		}),
-		i(1),
-		t({
-			"",
-			"\\end{frame}",
-		}),
-	}),
-	s({ trig = "col2", dscr = "Beamer 2 columns" }, {
-		t({
-			"\\begin{columns}[T]",
-			"\\begin{column}{0.5\textwidth}",
-			"    "
-		}),
-		i(1),
-		t({
-			"\\end{column}",
-			"\\begin{column}{0.5\textwidth}
-			"    "
-		}),
-		i(2),
-		t({
-			"\\end{column}",
-			"\\end{columns}"
-		})
-	}),
+    -- LaTeX Beamer
+    s({ trig = "frame", dscr = "Beamer frame" }, {
+        t({ -- using a table of strings for multiline text
+            "\\begin{frame}{}",
+            "    ",
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{frame}",
+        }),
+    }),
+    s({ trig = "frame", name = "framebreak", dscr = "Beamer frame with framebreak" }, {
+        t({ -- using a table of strings for multiline text
+            "\\begin{frame}[allowframebreaks]{}",
+            "    ",
+            "    \\framebreak",
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{frame}",
+        }),
+    }),
+    s({ trig = "col2", dscr = "Beamer 2 columns" }, {
+        t({
+            "\\begin{columns}",
+            "\\begin{column}{0.5\\textwidth}",
+            "    ",
+        }),
+        i(1),
+        t({
+            "\\end{column}",
+            "\\begin{column}{0.5\\textwidth}",
+            "    ",
+        }),
+        i(2),
+        t({
+            "\\end{column}",
+            "\\end{columns}",
+        }),
+    }),
 })
