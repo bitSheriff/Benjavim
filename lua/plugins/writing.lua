@@ -229,4 +229,28 @@ return {
             { "<leader>pc", "<cmd>OmniPreview stop<CR>", desc = "OmniPreview Stop" },
         },
     },
+
+    -- todo checkter
+    {
+        "bngarren/checkmate.nvim",
+        ft = "markdown", -- Lazy loads for Markdown files matching patterns in 'files'
+        opts = {
+            files = {
+                "*.md",
+                "*.todo",
+            },
+            keys = {
+                ["<leader>Tt"] = {
+                    rhs = "<cmd>Checkmate toggle<CR>",
+                    desc = "Toggle todo item",
+                    modes = { "n", "v" },
+                },
+                ["<leader>Tn"] = {
+                    rhs = "<cmd>Checkmate create<CR>",
+                    desc = "Create todo item",
+                    modes = { "n", "v" },
+                },
+            },
+        },
+    },
 }
