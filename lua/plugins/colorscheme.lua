@@ -1,12 +1,12 @@
 return {
 
     -- Actual colorscheme
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "tokyonight",
-        },
-    },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "tokyonight",
+    --     },
+    -- },
 
     { "EdenEast/nightfox.nvim" },
 
