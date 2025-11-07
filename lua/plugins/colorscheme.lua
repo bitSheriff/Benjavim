@@ -60,4 +60,9 @@ return {
             })
         end,
     },
+
+    {
+        "ianklapouch/wildberries.nvim",
+        name = "wildberries",
+    },
 }
