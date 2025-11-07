@@ -78,6 +78,7 @@
   "snipe.nvim": { "branch": "main", "commit": "d2d196c335919767803f905d573ce66340e33ee6" },
   "suda.vim": { "branch": "master", "commit": "9adda7d195222d4e2854efb2a88005a120296c47" },
   "synthwave84.nvim": { "branch": "master", "commit": "eac1f349713e2f470d8ee857913a42135bcc1a7f" },
+  "tabout.nvim": { "branch": "master", "commit": "9a3499480a8e53dcaa665e2836f287e3b7764009" },
   "tabular": { "branch": "master", "commit": "12437cd1b53488e24936ec4b091c9324cafee311" },
   "todo-comments.nvim": { "branch": "main", "commit": "19d461ddd543e938eb22505fb03fa878800270b6" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
