@@ -15,15 +15,27 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-local file = io.open(colorscheme_path, "r")
-if file then
-    local scheme = file:read("*l") -- Read the first line
-    file:close()
-
-    if scheme and scheme ~= "" then
-        -- Safely apply the stored colorscheme
-        pcall(vim.cmd.colorscheme, scheme)
+-- Restore the colorscheme on startup
+local function load_colorscheme()
+    local file = io.open(colorscheme_path, "r")
+    if file then
+        local scheme = file:read("*l")
+        file:close()
+        if scheme and scheme ~= "" then
+            pcall(vim.cmd.colorscheme, scheme)
+        end
     end
+end
+
+if vim.v.vim_did_enter == 1 then
+    -- VimEnter has already fired, so load colorscheme immediately
+    load_colorscheme()
+else
+    -- Schedule colorscheme loading for VimEnter
+    vim.api.nvim_create_autocmd("VimEnter", {
+        once = true,
+        callback = load_colorscheme,
+    })
 end
 
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
