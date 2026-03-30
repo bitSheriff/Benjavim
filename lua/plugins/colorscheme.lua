@@ -49,19 +49,6 @@ return {
     { "savq/melange-nvim" },
 
     {
-        "RedsXDD/neopywal.nvim",
-        name = "neopywal",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("neopywal").setup({
-                -- use_wallust = true,
-                -- colorscheme_file = os.getenv("HOME") .. "/.cache/wallust/colors_neopywal.vim",
-            })
-        end,
-    },
-
-    {
         "ianklapouch/wildberries.nvim",
         name = "wildberries",
     },
